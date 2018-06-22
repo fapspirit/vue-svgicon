@@ -43,6 +43,9 @@ const ext = args.ext
 fs.removeSync(targetPath)
 
 let svgo = new Svgo({
+  js2svg: {
+    useShortTags: false
+  },
   plugins: [
     {
       removeAttrs: {
@@ -196,4 +199,3 @@ glob(sourcePath, function (err, files) {
     })
   })
 })
-
